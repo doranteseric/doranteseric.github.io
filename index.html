@@ -1,15 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Portfolio Page</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="styles.css">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="My name is Eric Dorantes. This is my Portfolio.">
-        <meta name="author" content="Eric Dorantes">
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eric Dorantes' Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <img id="background-tree" src="https://raw.githubusercontent.com/doranteseric/TestImage/03676aed63c7d7e4e5f7badb161fe48b10ac8a5e/bg.svg">
+  <header id="navbar">
+    <nav>
+      <ul>
+        <li><a href="#welcome-section">Welcome</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#job-history">Job History</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="welcome-section">
+    <div class="leaves-container"></div>
+    <div class="avatar">
+      <img src="https://raw.githubusercontent.com/doranteseric/TestImage/ea38ef15dc6ba5a22d9dd64a7256f6fb4074f9d5/AvatarMaker2.svg" alt="Profile Picture" class="profile-picture">
+    </div>
+    <div class="awesome-box welcome-box">
+    <h1>Welcome to My Portfolio</h1>
+    <blockquote>
+      "Finding peace one line of code at a time" - Eric Dorantes
+    </blockquote>
+    <p class="indented-paragraph">
+  Hello, I'm Eric Dorantes, a passionate and self-taught software engineer with a background in mobile app development and a newfound focus on web development. My journey began over a decade ago when I started exploring the world of programming on my own. After taking a brief hiatus, I dove back into the tech world, this time immersing myself in the intricacies of web technologies. Over the past year, I have honed my skills in HTML, CSS, JavaScript, and modern frameworks like React, while also pursuing an associate degree in web development at Long Beach City College. Currently, I am the sole web developer at my company, working in a dynamic, startup-like environment. With a solid foundation in software engineering principles and a continuous drive for learning, I am excited to create innovative and responsive web solutions.
+</p>
+
+    </div>
+  </section>
+
+  <section id="skills" >
+    <div class="box-flex">
+      <div class="awesome-box box-card">
+        <h2>Web Development Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>Media Queries</li>
+          <li>Flex Box</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+          
+          <li>Responsive Web Design</li>
+          <li>Version Control (Git)</li>
+        </ul>
+      </div>
+      <div class="awesome-box box-card">
+        <h2>Software Engineering Skills</h2>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>Data Structures</li>
+          <li>AWS</li>
+          <li>APIs</li>
+          <li>Database Management</li>
+          <li>SQL</li>
+          
+          <li>NoSQL</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+
+    </div>
+    
+
+  </section>
+
+  
+
+  <section id="projects">
+    <h2>Web Development Projects</h2>
+      <h3>Websites</h3>
+    <div class="projects-grid">
+      <div class="project-tile">
+        <a href="link_to_project1.html" target="_blank">Project 1</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project2.html" target="_blank">Project 2</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project2.html" target="_blank">Project 3</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project2.html" target="_blank">Project 4</a>
+      </div>
+
+    </div>
+    <h3>Labs</h3>
+    <div class="projects-grid">
+      <div class="project-tile">
+        <a href="link_to_project1.html" target="_blank">Lab 1</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project2.html" target="_blank">Lab 2</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project1.html" target="_blank">Lab 3</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project2.html" target="_blank">Lab 4</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project1.html" target="_blank">Lab 5</a>
+      </div>
+      <div class="project-tile">
+        <a href="link_to_project2.html" target="_blank">Lab 6</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="job-history">
+    <h2>Job History</h2>
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <a id="profile-link" href="https://github.com/your-profile" target="_blank">GitHub Profile</a>
+    <a id="profile-link" href="https://github.com/your-profile" target="_blank">LinkedIn Profile</a>
+  </section>
+
+  <footer>
+    &copy; 2024, Eric Dorantes
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const leavesContainer = document.querySelector(".leaves-container");
+
+  for (let i = 0; i < 30; i++) {
+    const leaf = document.createElement("div");
+    leaf.classList.add("leaf");
+
+    // Randomly assign the leaf color
+    const randomColor = Math.random();
+    const leafColor = randomColor < 0.33 ? 'bright-green' : randomColor < 0.66 ? 'forest-green' : 'mid-green';
+    leaf.classList.add(leafColor);
+
+    // randomly assign spinning left or right
+    const randomFall = Math.random();
+    const leafFall = randomFall < .25 ? 'fall-left' : randomFall < 0.5 ? 'fall-right' : randomFall < 0.75 ? 'fall-left-fast' : 'fall-right-fast';
+    leaf.classList.add(leafFall);
+
+    leaf.style.left = `${Math.random() * 100}%`;
+    leaf.style.animationDuration = `${5 + Math.random() * 5}s`;
+    leaf.style.animationDelay = `${Math.random() * 5}s`;
+    leavesContainer.appendChild(leaf);
+  }
+
+  // Add a few flowers
+  for (let i = 0; i < 6; i++) {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+    const randomFall = Math.random();
+    const leafFall = randomFall < .25 ? 'fall-left' : randomFall < 0.5 ? 'fall-right' : randomFall < 0.75 ? 'fall-left-fast' : 'fall-right-fast';
+    flower.classList.add(leafFall);
+
+    for (let j = 0; j < 4; j++) {
+      const petal = document.createElement("div");
+      petal.classList.add("petal");
+      flower.appendChild(petal);
+    }
+
+    const center = document.createElement("div");
+    center.classList.add("center");
+    flower.appendChild(center);
+
+    flower.style.left = `${Math.random() * 100}%`;
+    flower.style.animationDuration = `${5 + Math.random() * 5}s`;
+    flower.style.animationDelay = `${Math.random() * 5}s`;
+    leavesContainer.appendChild(flower);
+  }
+
+});
+  
+  
+  </script>
+</body>
 </html>
